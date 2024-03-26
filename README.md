@@ -1,7 +1,17 @@
-Create VirtalEnvironment and add dependencies through requirements.txt file mentioned in the project folder
+# Feedback System API
 
-Add Dependencies : 
+This is the API for the Feedback System, which allows users to provide feedback and comments.
 
-pip install -r requirements.txt
+## Getting Started
 
-NOw, you are good to go
+### API Documentation
+
+The API documentation is available using Swagger UI. You can access it by following these steps:
+
+1. Ensure that the Django server is running.
+2. Go to the following URL in your browser:
+     
+     http://localhost:8000/api/schema/docs/
+     
+
+This will open up the Swagger UI interface where you can explore and interact with the API endpoints.

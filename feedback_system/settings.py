@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'accounts',
     'rest_framework.authtoken',
     'drf_yasg',
+    'drf_spectacular',
 ]
 
 MIDDLEWARE = [
@@ -128,7 +129,10 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
-        # 'DEFAULT_PERMISSION_CLASSES': [
+    
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+        
+    # 'DEFAULT_PERMISSION_CLASSES': [
     #     'rest_framework.permissions.IsAuthenticated',
     # ],
 
@@ -138,4 +142,8 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
         # 'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
+}
+
+SPECTACULAR_SETTINGS= {
+    'TITLE': 'feedback system DRF',
 }
